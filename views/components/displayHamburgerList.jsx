@@ -1,10 +1,10 @@
 const React = require('react');
 
-function DisplayHamburgerList() {
+const DisplayHamburgerList = props=> {
   return (
-
-    <ul></ul>
-
+      
+      <ul id='displayHamburgerList'>
+    </ul>
   );
 }
 module.exports = DisplayHamburgerList;

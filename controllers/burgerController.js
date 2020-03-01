@@ -1,11 +1,11 @@
 const db = require('../config/connection.js')
 
 const burger = {
-  getBurger(cb) {
+  getBurgers(cb) {
     db.query('SELECT * FROM burger', (err, burgers) => {
       if (err) throw err
       // return items
-      cb(items)
+      cb(burgers)
     })
   },
   createBurger(burger, cb) {
