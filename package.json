@@ -1,0 +1,29 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Restaurant app that lets users input the names of burgers they'd like to eat.  Uses mysql db, node.js, express and express-react-views.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qlhuynh949/burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qlhuynh949/burger/issues"
+  },
+  "homepage": "https://github.com/qlhuynh949/burger#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-react-views": "^0.11.0",
+    "mysql2": "^2.1.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  }
+}
