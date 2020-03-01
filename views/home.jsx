@@ -16,10 +16,10 @@ const Home = props => {
           <div className='container'>
             <div className='row'>
               <div className='col-md-6'>
-                <DisplayHamburgerList display={props.displayHamburgerList} />
+                <DisplayHamburgerList burgers={props.burgers} />
               </div>
               <div className='col-md-6'>
-                <DevouredHamburgerList display={props.devouredHamburgerList} />
+                <DevouredHamburgerList burgers={props.burgers} />
               </div>
             </div>
           </div>

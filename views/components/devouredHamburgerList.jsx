@@ -1,10 +1,11 @@
 const React = require('react');
 
-function DevouredHamburgerList() {
+const DevouredHamburgerList = props => {
   return (
 
-<ul></ul>
-   
+    <ul id='devouredHamburgerList'>
+    </ul>
+
 
   );
 }
