@@ -20,11 +20,11 @@ const renderBurger = () => {
 
 const renderBurgerList = list => {
   document.getElementById('displayHamburgerList').innerHTML = ''
+  document.getElementById('devouredHamburgerList').innerHTML = ''
   document.getElementById('hamburgerHeader').innerHTML = ''
   document.getElementById('devouredHeader').innerHTML = ''
 
-  if (list.length > 0)
-  {
+  if (list.length > 0) {
     document.getElementById('hamburgerHeader').innerHTML = 'Burger List'
     document.getElementById('devouredHeader').innerHTML = 'Devoured List'
 
@@ -39,7 +39,7 @@ const renderBurgerList = list => {
       if (devoured === 0) {
         burgerElem.innerHTML = `${burger_name} <span data-id=${id} data-devoured=${devoured} class="devoure badge badge-danger badge-pill">Devoure</span>`
 
-      
+
         document.getElementById('displayHamburgerList').append(burgerElem)
       }
       else {
@@ -53,7 +53,7 @@ const renderBurgerList = list => {
 
 
 
-const devoureBurger = ({ dataset: { id,devoured } }) => {
+const devoureBurger = ({ dataset: { id, devoured } }) => {
   // axios DELETE request, which takes the data-id property off of the x badge on the <li> to identify the item to be deleted
   axios.put(`/api/burgers/${id}`, { devoured: !parseInt(devoured) })
     // once finished, a GET request for the user and all their items is run
@@ -68,5 +68,6 @@ document.addEventListener('click', event => event.target.classList.contains('dev
 
 document.getElementById('submitHamburger').addEventListener('click',
   event => {
+
     createHamburger();
   })
